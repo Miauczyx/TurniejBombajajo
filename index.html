@@ -1,165 +1,470 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2108/2108154.png">
-    <title>Miauczyx Guessr</title>
-
-    <!-- Leaflet CSS for maps -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    
-    <style>
-        /* Resetting body styles */
-        body {
-            background-color: black;
-            color: white;
-            font-family: sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            overflow: hidden; /* Prevents scrollbars */
-        }
-
-        /* Header style */
-        h1 {
-            font-size: 50px;
-            margin-top: 50px;
-            text-transform: uppercase;
-            color: white;
-            z-index: 1;
-            text-shadow: 7px 7px black;
-        }
-
-        /* Make the map cover full screen */
-        #map {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 130%;
-            z-index: -1; /* Place map in the background */
-            margin-top: -40px;
-        }
-
-        /* Styling for the button container */
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 100px;
-            position: relative;
-            z-index: 2; /* Ensure content stays on top of map */
-        }
-
-        /* Styling the buttons */
-        .button {
-            background-color: black;
-            color: white;
-            padding: 120px 100px;
-            font-size: 40px;
-            border: 3px solid white;
-            cursor: pointer;
-            text-transform: uppercase;
-            text-align: center;
-            width: 500px;
-            height: 850px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Hover effect on buttons */
-        .button:hover {
-            background-color: #444;
-            transform: scale(1.1);
-        }
-
-        /* Text inside the button */
-        .button-text {
-            position: relative;
-            z-index: 2;
-            margin-top: -70px;
-            text-shadow: 5px 5px 5px gray;
-        }
-
-        /* Image inside the button */
-        .button img {
-            width: 150%;
-            height: auto;
-            margin-top: 50px;
-            margin-left: -73px;
-            border-radius: 10px;
-            height: 520px;
-        }
-
-        /* Play text inside the button */
-        .play {
-            margin-top: 30px;
-            font-size: 50px;
-            text-shadow: 5px 5px 5px gray;
-        }
-
-    </style>
+    <title>Bombajajo - Rocket League Turniej</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header with page title -->
-    <h1>Miauczyx Guessr</h1>
-
-    <!-- Map container -->
-    <div id="map"></div>
-
-    <!-- Button container with links -->
-    <div class="container">
-        <!-- Country Guessr button -->
-        <button class="button" onclick="window.location.href='country.html'">
-            <div class="button-text">Country Guessr</div>
-            <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2022/09/uk_heatwave/24436816-1-eng-GB/UK_heatwave_article.jpg" alt="Country Guessr">
-            <div class="play"><b>GRAJ</b></div>
-        </button>
-        
-        <!-- City Guessr button -->
-        <button class="button" onclick="window.location.href='city.html'">
-            <div class="button-text">City <br>Guessr</div>
-            <img id="city" src="https://railtour.ch/itineraries/destination-tours/London%20-%20Mit%20gutem%20Gewissen-95474/1098/image-thumb__1098__img-text-teaser/London%20-%20das%20gr%C3%BCne%20London%20entdecken-199835.541f8de9.jpg" alt="City Guessr">
-            <div class="play"><b>GRAJ</b></div>
-        </button>
+    <div class="header-main">
+        <div class="header-content">
+            <div class="header-icon">
+                <img class="logo" src="logo.jpg" alt="logo">
+            </div>
+            <div class="header-title">
+                <span class="header-title-main">BOMBAJAJO</span>
+                <span class="header-title-sub">TURNIEJ ROCKET LEAGUE</span>
+            </div>
+            <div class="header-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#f0a500" stroke-width="2"/>
+                    <circle cx="24" cy="24" r="14" stroke="#f0a500" stroke-width="1.5"/>
+                    <circle cx="24" cy="24" r="8" stroke="#f0a500" stroke-width="1"/>
+                    <circle cx="24" cy="24" r="3" fill="#f0a500"/>
+                    <line x1="24" y1="4" x2="24" y2="10" stroke="#f0a500" stroke-width="2"/>
+                    <line x1="24" y1="38" x2="24" y2="44" stroke="#f0a500" stroke-width="2"/>
+                    <line x1="4" y1="24" x2="10" y2="24" stroke="#f0a500" stroke-width="2"/>
+                    <line x1="38" y1="24" x2="44" y2="24" stroke="#f0a500" stroke-width="2"/>
+                    <line x1="9.4" y1="9.4" x2="13.6" y2="13.6" stroke="#f0a500" stroke-width="2"/>
+                    <line x1="34.4" y1="34.4" x2="38.6" y2="38.6" stroke="#f0a500" stroke-width="2"/>
+                    <line x1="9.4" y1="38.6" x2="13.6" y2="34.4" stroke="#f0a500" stroke-width="2"/>
+                    <line x1="34.4" y1="13.6" x2="38.6" y2="9.4" stroke="#f0a500" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+        <div class="header-stats">
+            <span class="stat-item"><span class="stat-label">Drużyny:</span> 32</span>
+            <span class="stat-item"><span class="stat-label">Format:</span> Swiss: bo3 → Grupy: bo5 → Playoffs: bo7</span>
+            <span class="stat-item"><span class="stat-label">Data:</span> 27.07.2026</span>
+        </div>
     </div>
 
-    <!-- Leaflet JS for maps -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Initialize the map
-        const map = L.map('map', {
-            center: [51.505, -0.09], // Default center for the map (London)
-            zoom: 4, // Default zoom level
-            scrollWheelZoom: true, // Enable zooming with scroll
-            dragging: true, // Enable dragging (panning)
-            touchZoom: true, // Enable zooming on touch screens (pinch to zoom)
-            zoomControl: false, // Hide the zoom control (for a cleaner UI)
-            minZoom: 2, // Set the minimum zoom level
-            maxZoom: 19, // Set the maximum zoom level
-        });
+    <h1>LISTA DRUŻYN</h1>
+    <div class="team-list">
+        <div class="team-list-col">
+            <div class="team-list-item"><span class="team-num">1.</span> <span id="tml1"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">2.</span> <span id="tml2"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">3.</span> <span id="tml3"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">4.</span> <span id="tml4"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">5.</span> <span id="tml5"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">6.</span> <span id="tml6"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">7.</span> <span id="tml7"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">8.</span> <span id="tml8"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+        </div>
 
-        // Add CartoDB Dark Matter tile layer (dark theme)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CartoDB</a>',
-            maxZoom: 19,
-        }).addTo(map);
+        <div class="team-list-col">
+            <div class="team-list-item"><span class="team-num">9.</span> <span id="tml9"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">10.</span> <span id="tml10"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">11.</span> <span id="tml11"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">12.</span> <span id="tml12"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">13.</span> <span id="tml13"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">14.</span> <span id="tml14"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">15.</span> <span id="tml15"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">16.</span> <span id="tml16"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+        </div>
 
-        // Map interaction enabled
-        map.on('click', function(e) {
-            console.log("You clicked the map at " + e.latlng);
-        });
+        <div class="team-list-col">
+            <div class="team-list-item"><span class="team-num">17.</span> <span id="tml17"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">18.</span> <span id="tml18"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">19.</span> <span id="tml19"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">20.</span> <span id="tml20"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">21.</span> <span id="tml21"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">22.</span> <span id="tml22"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">23.</span> <span id="tml23"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">24.</span> <span id="tml24"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+        </div>
 
-        // Prevent panning or zooming outside the bounds of the map
-        const bounds = map.getBounds(); // Get the current map bounds based on the size of the map
-        map.setMaxBounds(bounds); // Set the max bounds to prevent panning beyond the initial bounds
-        map.options.maxBoundsViscosity = 1;
+        <div class="team-list-col">
+            <div class="team-list-item"><span class="team-num">25.</span> <span id="tml25"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">26.</span> <span id="tml26"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">27.</span> <span id="tml27"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">28.</span> <span id="tml28"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">29.</span> <span id="tml29"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">30.</span> <span id="tml30"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">31.</span> <span id="tml31"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+            <div class="team-list-item"><span class="team-num">32.</span> <span id="tml32"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</span></div>
+        </div>
+    </div>
 
-    </script>
+    <h1>SWISS STAGE</h1>
+    <div class="sswiss">
+        <div class="swiss-title">Swiss Group 1</div>
+        <div class="swiss">
+            <div class="col">
+                <div class="zz">
+                    <div class="top">0 - 0</div>
+                    <div class="mecz" id="s1zz01"><div class="team" id="s10001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zz02"><div class="team" id="s10003"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10004"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zz03"><div class="team" id="s10005"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10006"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zz04"><div class="team" id="s10007"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10008"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zz05"><div class="team" id="s10009"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10010"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zz06"><div class="team" id="s10011"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10012"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zz07"><div class="team" id="s10013"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10014"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zz08"><div class="team" id="s10015"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10016"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="jz">
+                    <div class="top">1 - 0</div>
+                    <div class="mecz" id="s1jz01"><div class="team" id="s11001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jz02"><div class="team" id="s11003"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11004"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jz03"><div class="team" id="s11005"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11006"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jz04"><div class="team" id="s11007"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11008"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="zj">
+                    <div class="top">0 - 1</div>
+                    <div class="mecz" id="s1zj01"><div class="team" id="s10101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zj02"><div class="team" id="s10103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10104"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zj03"><div class="team" id="s10105"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10106"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zj04"><div class="team" id="s10107"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10108"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dz">
+                    <div class="top">2 - 0</div>
+                    <div class="mecz" id="s1dz01"><div class="team" id="s12001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1dz02"><div class="team" id="s12003"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12004"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="jj">
+                    <div class="top">1 - 1</div>
+                    <div class="mecz" id="s1jj01"><div class="team" id="s11101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jj02"><div class="team" id="s11103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11104"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jj03"><div class="team" id="s11105"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11106"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jj04"><div class="team" id="s11107"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11108"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="zd">
+                    <div class="top">0 - 2</div>
+                    <div class="mecz" id="s1zd01"><div class="team" id="s10201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1zd02"><div class="team" id="s10203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s10204"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="q1">
+                    <div class="qtop">KWALIFIKACJA 3 - 0</div>
+                    <div class="mecz qualify" id="s1q101"><div class="fteam" id="s13001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="fteam" id="s13002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="dj">
+                    <div class="top">2 - 1</div>
+                    <div class="mecz" id="s1dj01"><div class="team" id="s12101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1dj02"><div class="team" id="s12103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12104"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1dj03"><div class="team" id="s12105"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12106"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="jd">
+                    <div class="top">1 - 2</div>
+                    <div class="mecz" id="s1jd01"><div class="team" id="s11201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jd02"><div class="team" id="s11203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11204"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1jd03"><div class="team" id="s11205"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s11206"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="e1">
+                    <div class="etop">ELIMINACJA 0 - 3</div>
+                    <div class="mecz eliminated" id="s1e101"><div class="fteam" id="s10301"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="fteam" id="s10302"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="q2">
+                    <div class="qtop">KWALIFIKACJA 3 - 1</div>
+                    <div class="mecz qualify" id="s1q201"><div class="ffteam" id="s13101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s13102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s13103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="dd">
+                    <div class="top">2 - 2</div>
+                    <div class="mecz" id="s1dd01"><div class="team" id="s12201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1dd02"><div class="team" id="s12203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12204"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s1dd03"><div class="team" id="s12205"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s12206"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="e2">
+                    <div class="etop">ELIMINACJA 1 - 3</div>
+                    <div class="mecz eliminated" id="s1e201"><div class="ffteam" id="s11301"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s11302"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s11303"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="q3">
+                    <div class="qtop">KWALIFIKACJA 3 - 2</div>
+                    <div class="mecz qualify" id="s1q301"><div class="ffteam" id="s13201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s13202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s13203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="e3">
+                    <div class="etop">ELIMINACJA 2 - 3</div>
+                    <div class="mecz eliminated" id="s1e301"><div class="ffteam" id="s12301"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s12302"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s12303"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 10px;"></div>
+
+        <div class="swiss-title">Swiss Group 2</div>
+        <div class="swiss">
+            <div class="col">
+                <div class="zz">
+                    <div class="top">0 - 0</div>
+                    <div class="mecz" id="s2zz01"><div class="team" id="s20001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zz02"><div class="team" id="s20003"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20004"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zz03"><div class="team" id="s20005"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20006"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zz04"><div class="team" id="s20007"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20008"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zz05"><div class="team" id="s20009"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20010"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zz06"><div class="team" id="s20011"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20012"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zz07"><div class="team" id="s20013"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20014"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zz08"><div class="team" id="s20015"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20016"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="jz">
+                    <div class="top">1 - 0</div>
+                    <div class="mecz" id="s2jz01"><div class="team" id="s21001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jz02"><div class="team" id="s21003"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21004"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jz03"><div class="team" id="s21005"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21006"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jz04"><div class="team" id="s21007"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21008"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="zj">
+                    <div class="top">0 - 1</div>
+                    <div class="mecz" id="s2zj01"><div class="team" id="s20101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zj02"><div class="team" id="s20103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20104"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zj03"><div class="team" id="s20105"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20106"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zj04"><div class="team" id="s20107"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20108"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dz">
+                    <div class="top">2 - 0</div>
+                    <div class="mecz" id="s2dz01"><div class="team" id="s22001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2dz02"><div class="team" id="s22003"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22004"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="jj">
+                    <div class="top">1 - 1</div>
+                    <div class="mecz" id="s2jj01"><div class="team" id="s21101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jj02"><div class="team" id="s21103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21104"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jj03"><div class="team" id="s21105"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21106"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jj04"><div class="team" id="s21107"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21108"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="zd">
+                    <div class="top">0 - 2</div>
+                    <div class="mecz" id="s2zd01"><div class="team" id="s20201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2zd02"><div class="team" id="s20203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s20204"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="q1">
+                    <div class="qtop">KWALIFIKACJA 3 - 0</div>
+                    <div class="mecz qualify" id="s2q101"><div class="fteam" id="s23001"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="fteam" id="s23002"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="dj">
+                    <div class="top">2 - 1</div>
+                    <div class="mecz" id="s2dj01"><div class="team" id="s22101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2dj02"><div class="team" id="s22103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22104"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2dj03"><div class="team" id="s22105"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22106"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="jd">
+                    <div class="top">1 - 2</div>
+                    <div class="mecz" id="s2jd01"><div class="team" id="s21201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jd02"><div class="team" id="s21203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21204"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2jd03"><div class="team" id="s21205"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s21206"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="e1">
+                    <div class="etop">ELIMINACJA 0 - 3</div>
+                    <div class="mecz eliminated" id="s2e101"><div class="fteam" id="s20301"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="fteam" id="s20302"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="q2">
+                    <div class="qtop">KWALIFIKACJA 3 - 1</div>
+                    <div class="mecz qualify" id="s2q201"><div class="ffteam" id="s23101"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s23102"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s23103"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="dd">
+                    <div class="top">2 - 2</div>
+                    <div class="mecz" id="s2dd01"><div class="team" id="s22201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2dd02"><div class="team" id="s22203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22204"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                    <div class="mecz" id="s2dd03"><div class="team" id="s22205"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team" id="s22206"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="e2">
+                    <div class="etop">ELIMINACJA 1 - 3</div>
+                    <div class="mecz eliminated" id="s2e201"><div class="ffteam" id="s21301"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s21302"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s21303"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="q3">
+                    <div class="qtop">KWALIFIKACJA 3 - 2</div>
+                    <div class="mecz qualify" id="s2q301"><div class="ffteam" id="s23201"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s23202"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s23203"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+                <div class="e3">
+                    <div class="etop">ELIMINACJA 2 - 3</div>
+                    <div class="mecz eliminated" id="s2e301"><div class="ffteam" id="s22301"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s22302"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="ffteam" id="s22303"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>GROUP STAGE</h1>
+    <div class="group">
+        <div class="gr">
+            <div class="gtop">Grupa A</div>
+            <div class="gmecz"><div class="color green"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color red"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gtop2">Mecze grupy A</div>
+            <div class="round">Runda 1</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 2</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 3</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+        </div>
+        <div class="gr">
+            <div class="gtop">Grupa B</div>
+            <div class="gmecz"><div class="color green"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color red"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gtop2">Mecze grupy B</div>
+            <div class="round">Runda 1</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 2</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 3</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+        </div>
+        <div class="gr">
+            <div class="gtop">Grupa C</div>
+            <div class="gmecz"><div class="color green"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color red"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gtop2">Mecze grupy C</div>
+            <div class="round">Runda 1</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 2</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 3</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+        </div>
+        <div class="gr">
+            <div class="gtop">Grupa D</div>
+            <div class="gmecz"><div class="color green"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color yellow"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gmecz"><div class="color red"></div><div class="gteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="gscore"><b>0-0</b></div><div class="gscore">0-0</div><div class="gscore"><i>0</i></div></div>
+            <div class="gtop2">Mecze grupy D</div>
+            <div class="round">Runda 1</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 2</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="round">Runda 3</div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+            <div class="mecz"><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="score">0</div><div class="score">0</div><div class="team"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div></div>
+        </div>
+        <div class="gr">
+            <div class="legend">
+                <div class="legend-title">LEGENDA</div>
+                <div class="legend-item"><div class="legend-color green"></div>Kwalifikacja do upper bracketa</div>
+                <div class="legend-item"><div class="legend-color yellow"></div>Kwalifikacja do lower bracketa</div>
+                <div class="legend-item"><div class="legend-color red"></div>Eliminacja</div>
+            </div>
+        </div>
+    </div>
+
+    <h1>PLAYOFFS</h1>
+    <div class="playoffs">
+        <div class="col">
+            <div class="ibracket" style="margin-top: 170px;">Lower Bracket Round 1</div>
+            <div class="pmecz" id="lbr1">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="pmecz" id="lbr2">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="pmecz" id="lbr3">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="pmecz" id="lbr4">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+        </div>
+        <div class="col">
+            <div class="ibracket" style="margin-top: 170px;">Lower Bracket Round 2</div>
+            <div class="pmecz" id="xd1">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="pmecz" id="xd2">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+        </div>
+        <div class="col">
+            <div class="ibracket" style="margin-top: 8px;">Upper Bracket Quarterfinals</div>
+            <div class="pmecz">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="pmecz">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="ibracket" style="margin-top: 8px;">Lower Bracket Quarterfinals</div>
+            <div class="pmecz" id="xd3">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="pmecz" id="xd4">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+        </div>
+        <div class="col">
+            <div class="ibracket" style="margin-top: 170px;">Semifinals</div>
+            <div class="pmecz" id="xd5">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="pmecz" id="xd6">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+        </div>
+        <div class="col">
+            <div class="ibracket" style="margin-top: 170px;">Grand finals</div>
+            <div class="pmecz" id="xd7">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+            <div class="ibracket" style="margin-top: 70px;margin-left: -90px;">3rd Place Match</div>
+            <div class="pmecz" id="xd9">
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+                <div class="bracket"><div class="pteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="pscore">0</div></div>
+            </div>  
+        </div>
+        <div class="col coll">
+            <div class="rt" style="margin-top: 170px;">
+                <div class="rtl">Miejsce</div><div class="rtll">Team</div><div class="rtl">Nagroda</div>
+            </div>
+            <div class="rtt"><div class="rm">🥇1st</div><div class="rteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="rm">200zł</div></div>
+            <div class="rtt"><div class="rm">🥈2nd</div><div class="rteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="rm">100zł</div></div>
+            <div class="rtt"><div class="rm">🥉3rd</div><div class="rteam"><img src="loga/logo.png" class="team-logo" alt="logo"> TBD</div><div class="rm">50zł</div></div>
+        </div>
+    </div>
 </body>
 </html>
