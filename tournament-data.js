@@ -6,7 +6,7 @@
 const teams = [
     ["bombajajo", 0, "logo.png"],
     ["cioty", 0, "logo.png"],
-    ["TBD", 0, "logo.png"],
+    ["kutas", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
