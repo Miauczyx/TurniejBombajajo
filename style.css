@@ -122,6 +122,7 @@ h1 {
     font-weight: 400;
     font-size: 11px;
     min-width: 24px;
+    flex-shrink: 0;
 }
 
 .swiss-title {
@@ -251,14 +252,20 @@ h1 {
 }
 
 .team {
-    width: 50%;
+    width: 45%;
     font-weight: 500;
+    justify-content: flex-start;
+    padding-left: 4px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .fteam {
     width: 50%;
     border-left: 1px solid #3a3a3a;
     font-weight: 600;
+    justify-content: center;
+    padding: 0 4px;
 }
 
 .fteam:first-child {
@@ -269,6 +276,8 @@ h1 {
     width: 33.33%;
     border-left: 1px solid #3a3a3a;
     font-weight: 600;
+    justify-content: center;
+    padding: 0 4px;
 }
 
 .ffteam:first-child {
@@ -282,6 +291,8 @@ h1 {
     font-size: 13px;
     font-weight: 700;
     color: #eee;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .mecz.qualify {
@@ -377,18 +388,22 @@ h1 {
 .gteam {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     color: #ccc;
     height: 100%;
     width: 69%;
     font-size: 12px;
     font-weight: 500;
+    padding-left: 4px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .color {
     width: 8%;
     border-right: 1px solid #3a3a3a;
+    flex-shrink: 0;
 }
 
 .red { background: #3a2020; }
@@ -405,6 +420,7 @@ h1 {
     color: #ccc;
     height: 100%;
     font-size: 12px;
+    flex-shrink: 0;
 }
 
 .gscore b { color: #eee; }
@@ -487,12 +503,15 @@ h1 {
 .pteam {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: #ccc;
     height: 100%;
     width: 85%;
     font-size: 11px;
     font-weight: 500;
+    padding-left: 4px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .pscore {
@@ -505,6 +524,7 @@ h1 {
     width: 15%;
     font-size: 12px;
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .ibracket {
@@ -521,6 +541,7 @@ h1 {
     margin-top: 8px;
     margin-right: 30px;
     letter-spacing: 0.5px;
+    flex-shrink: 0;
 }
 
 .pmecz {
@@ -539,6 +560,7 @@ h1 {
 
 .gr { margin-right: 30px; }
 
+/* ===== RANKING - TOP 3 ===== */
 .rt {
     width: 300px;
     display: flex;
@@ -546,28 +568,36 @@ h1 {
 
 .rtl {
     background: #222;
-    width: 33%;
-    padding-top: 5px;
-    height: 20px;
+    width: 75px;
+    padding-top: 3px;
+    height: 18px;
     color: #ddd;
     font-weight: 700;
     font-size: 10px;
     text-align: center;
     border: 1px solid #4a4a4a;
     letter-spacing: 0.5px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rtll {
     background: #222;
-    width: 67%;
-    padding-top: 5px;
-    height: 20px;
+    width: 145px;
+    padding-top: 3px;
+    height: 18px;
     color: #ddd;
     font-weight: 700;
     font-size: 10px;
     text-align: center;
     border: 1px solid #4a4a4a;
     letter-spacing: 0.5px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rtt {
@@ -576,7 +606,8 @@ h1 {
 }
 
 .rteam {
-    width: 67%;
+    padding-left: 4px;
+    width: 150px;
     background: #151515;
     padding-top: 3px;
     height: 18px;
@@ -587,10 +618,15 @@ h1 {
     border: 1px solid #4a4a4a;
     letter-spacing: 0.5px;
     margin-top: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .rm {
-    width: 67%;
+    width: 75px;
     background: #151515;
     padding-top: 3px;
     height: 18px;
@@ -600,14 +636,118 @@ h1 {
     text-align: center;
     border: 1px solid #4a4a4a;
     letter-spacing: 0.5px;
-    width: 33%;
     margin-top: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .coll {
     margin-left: 30px;
 }
 
+.logo {
+    width: 80px;
+    border-radius: 100%;
+}
+
+/* ===== LOGO I NAZWY DRUŻYN ===== */
+.team-logo {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 2px;
+}
+
+.team-with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2px;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ===== KONTENER NAZWY - TYLKO TEKST SIĘ PRZEWIJA ===== */
+.team-name-scroll {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.team-name-scroll .team-name-inner {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 30px;
+}
+
+/* Tylko długie nazwy (> 12 znaków) - przewijanie w prawo */
+.team-name-scroll.scroll .team-name-inner {
+    animation: scrollRight 8s linear infinite;
+}
+
+.team-name-scroll.scroll:hover .team-name-inner {
+    animation-play-state: paused;
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100% + 100%));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Dla meczy */
+.mecz .team-name-scroll {
+    max-width: 100px;
+}
+
+/* Dla bracketów */
+.bracket .team-name-scroll,
+.pteam .team-name-scroll {
+    max-width: 120px;
+}
+
+/* Dla fteam i ffteam */
+.fteam .team-name-scroll,
+.ffteam .team-name-scroll {
+    max-width: 100px;
+}
+
+/* Dla gteam w group stage */
+.gteam .team-name-scroll {
+    max-width: 150px;
+}
+
+/* Dla rteam w rankingu */
+.rteam .team-name-scroll {
+    max-width: 150px;
+}
+
+/* ===== LISTA DRUŻYN - BEZ ANIMACJI ===== */
+.team-list-item .team-name-scroll {
+    max-width: 120px;
+}
+
+.team-list-item .team-name-scroll .team-name-inner {
+    animation: none !important;
+}
+
+/* ===== RESPONSYWNOŚĆ ===== */
 @media (max-width: 1200px) {
     .team-list {
         grid-template-columns: 1fr 1fr;
@@ -647,30 +787,17 @@ h1 {
     .coll {
         margin-left: 0;
     }
-}
-.logo {
-    width: 80px;
-    border-radius: 100%;
-}
-
-.team-logo {
-    width: 12px;
-    height: 12px;
-    object-fit: contain;
-    margin-right: 4px;
-    vertical-align: middle;
-    flex-shrink: 0;
-}
-
-.team, .fteam, .ffteam, .gteam, .pteam, .rteam {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-}
-
-.team-list-item span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    
+    .team-logo {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .team-list-item .team-name-scroll {
+        max-width: 80px;
+    }
+    
+    .team-name-scroll.scroll .team-name-inner {
+        animation-duration: 5s !important;
+    }
 }
