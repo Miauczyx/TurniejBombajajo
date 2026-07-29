@@ -801,3 +801,6 @@ h1 {
         animation-duration: 5s !important;
     }
 }
+.kreska {
+    position: absolute;
+}
