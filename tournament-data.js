@@ -4,9 +4,9 @@
 
 // Lista wszystkich drużyn: [nazwa, mmr, nazwa_pliku_logo]
 const teams = [
-    ["bombajajo", 0, "logo.png"],
-    ["cioty", 0, "logo.png"],
-    ["kutas", 0, "logo.png"],
+    ["TBD", 0, "logo.png"],
+    ["TBD", 0, "logo.png"],
+    ["TBD", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
@@ -45,7 +45,7 @@ const teams = [
 const swissMatches = {
     // === SWISS GROUP 1 ===
     s1_round1: [
-        { team1: "bombajajo", team2: "cioty", score1: 2, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
