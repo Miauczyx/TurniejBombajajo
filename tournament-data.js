@@ -22,7 +22,7 @@ const teams = [
     ["Złomiarze", 0, "logo.png"],
     ["wyjadacze", 0, "logo.png"],
     ["bajo", 0, "logo.gif"],
-    ["złotówka team", 0, "logo.png"],
+    ["złotówka team", 0, "zl.png"],
     ["fc Barcelona", 0, "fcb.webp"],
     ["Rzurek", 0, "logo.png"],
     ["drużyna totalnego piwa", 0, "piwo.png"],
