@@ -6,6 +6,7 @@
 function createTeamElement(teamName) {
     const container = document.createElement('span');
     container.className = 'team-with-logo';
+    container.setAttribute('data-team-name', teamName);
     
     const teamData = teams.find(t => t[0] === teamName);
     const logoFile = teamData ? teamData[2] : 'logo.png';
@@ -18,7 +19,6 @@ function createTeamElement(teamName) {
         this.src = 'loga/logo.png';
     };
     
-    // Kontener na nazwę z przewijaniem
     const nameWrapper = document.createElement('span');
     nameWrapper.className = 'team-name-scroll';
     
@@ -26,7 +26,6 @@ function createTeamElement(teamName) {
     nameInner.className = 'team-name-inner';
     nameInner.textContent = teamName;
     
-    // Jeśli nazwa dłuższa niż 12 znaków - dodaj klasę scroll
     if (teamName.length > 12) {
         nameWrapper.classList.add('scroll');
     }
@@ -35,6 +34,7 @@ function createTeamElement(teamName) {
     
     container.appendChild(logo);
     container.appendChild(nameWrapper);
+    
     return container;
 }
 
@@ -42,23 +42,15 @@ function setTeamElement(elementId, teamName) {
     const element = document.getElementById(elementId);
     if (!element) return;
     element.innerHTML = '';
-    if (teamName && teamName !== 'TBD') {
-        const teamElement = createTeamElement(teamName);
-        element.appendChild(teamElement);
-    } else {
-        element.textContent = 'TBD';
-    }
+    const teamElement = createTeamElement(teamName);
+    element.appendChild(teamElement);
 }
 
 function setTeamElementDirect(element, teamName) {
     if (!element) return;
     element.innerHTML = '';
-    if (teamName && teamName !== 'TBD') {
-        const teamElement = createTeamElement(teamName);
-        element.appendChild(teamElement);
-    } else {
-        element.textContent = 'TBD';
-    }
+    const teamElement = createTeamElement(teamName);
+    element.appendChild(teamElement);
 }
 
 // ============================================
@@ -70,8 +62,8 @@ const sortedTeams = [...teams].sort((a, b) => b[1] - a[1]);
 for (let i = 0; i < sortedTeams.length; i++) {
     const element = document.getElementById('tml' + (i + 1));
     if (element) {
-        element.innerHTML = '';
         const teamElement = createTeamElement(sortedTeams[i][0]);
+        element.innerHTML = '';
         element.appendChild(teamElement);
     }
 }
@@ -176,13 +168,9 @@ function fillGroupStage() {
             const scoreEls = teamEl.querySelectorAll('.gscore');
             
             if (gteamEl) {
+                const teamElement = createTeamElement(team.name);
                 gteamEl.innerHTML = '';
-                if (team.name && team.name !== 'TBD') {
-                    const teamElement = createTeamElement(team.name);
-                    gteamEl.appendChild(teamElement);
-                } else {
-                    gteamEl.textContent = 'TBD';
-                }
+                gteamEl.appendChild(teamElement);
             }
             
             if (scoreEls.length >= 1) {
@@ -364,33 +352,73 @@ function fillPlayoffs() {
     const rteamElements = document.querySelectorAll('.rteam');
     if (rteamElements.length >= 3) {
         if (finalResults.first) {
+            const teamElement = createTeamElement(finalResults.first);
             rteamElements[0].innerHTML = '';
-            if (finalResults.first !== 'TBD') {
-                const teamElement = createTeamElement(finalResults.first);
-                rteamElements[0].appendChild(teamElement);
-            } else {
-                rteamElements[0].textContent = 'TBD';
-            }
+            rteamElements[0].appendChild(teamElement);
         }
         if (finalResults.second) {
+            const teamElement = createTeamElement(finalResults.second);
             rteamElements[1].innerHTML = '';
-            if (finalResults.second !== 'TBD') {
-                const teamElement = createTeamElement(finalResults.second);
-                rteamElements[1].appendChild(teamElement);
-            } else {
-                rteamElements[1].textContent = 'TBD';
-            }
+            rteamElements[1].appendChild(teamElement);
         }
         if (finalResults.third) {
+            const teamElement = createTeamElement(finalResults.third);
             rteamElements[2].innerHTML = '';
-            if (finalResults.third !== 'TBD') {
-                const teamElement = createTeamElement(finalResults.third);
-                rteamElements[2].appendChild(teamElement);
-            } else {
-                rteamElements[2].textContent = 'TBD';
-            }
+            rteamElements[2].appendChild(teamElement);
         }
     }
+}
+
+// ============================================
+//  KLIKNIĘCIE NA DRUŻYNĘ - PROSTY MODAL
+// ============================================
+
+// Tworzenie modala (tylko raz)
+function createTeamModal() {
+    if (document.getElementById('teamModal')) return;
+    
+    const modal = document.createElement('div');
+    modal.id = 'teamModal';
+    
+    const content = document.createElement('div');
+    content.className = 'modal-content';
+    
+    const logo = document.createElement('img');
+    logo.className = 'modal-logo';
+    logo.id = 'modalLogo';
+    
+    const name = document.createElement('div');
+    name.className = 'modal-name';
+    name.id = 'modalName';
+    
+    content.appendChild(logo);
+    content.appendChild(name);
+    modal.appendChild(content);
+    document.body.appendChild(modal);
+    
+    modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
+}
+
+// Funkcja do pokazania modala
+function showTeamModal(teamName, logoFile) {
+    const modal = document.getElementById('teamModal');
+    const modalLogo = document.getElementById('modalLogo');
+    const modalName = document.getElementById('modalName');
+    
+    if (!modal || !modalLogo || !modalName) {
+        return;
+    }
+    
+    modalLogo.src = `loga/${logoFile}`;
+    modalLogo.onerror = function() {
+        this.src = 'loga/logo.png';
+    };
+    modalName.textContent = teamName;
+    modal.style.display = 'flex';
 }
 
 // ============================================
@@ -398,7 +426,62 @@ function fillPlayoffs() {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM załadowany');
+    
     fillSwissMatches();
     fillGroupStage();
     fillPlayoffs();
+    
+    createTeamModal();
+    
+    // Pobierz wszystkie elementy listy
+    const teamItems = document.querySelectorAll('.team-list-item');
+    console.log('Znaleziono elementów listy:', teamItems.length);
+    
+    teamItems.forEach((item, index) => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            // Szukamy nazwy drużyny
+            let teamName = 'TBD';
+            let logoFile = 'logo.png';
+            
+            // Znajdź .team-with-logo
+            const teamWithLogo = this.querySelector('.team-with-logo');
+            if (teamWithLogo) {
+                // Pobierz z data-team-name
+                teamName = teamWithLogo.getAttribute('data-team-name') || 'TBD';
+                const logoImg = teamWithLogo.querySelector('.team-logo');
+                if (logoImg && logoImg.src) {
+                    const parts = logoImg.src.split('/');
+                    logoFile = parts[parts.length - 1];
+                }
+            }
+            
+            // Jeśli nie znaleziono, spróbuj po ID
+            if (teamName === 'TBD' || teamName === '') {
+                const span = this.querySelector('span');
+                if (span) {
+                    const id = span.id;
+                    if (id) {
+                        const num = parseInt(id.replace('tml', ''));
+                        if (num > 0 && num <= sortedTeams.length) {
+                            teamName = sortedTeams[num - 1][0];
+                            const teamData = teams.find(t => t[0] === teamName);
+                            if (teamData) {
+                                logoFile = teamData[2];
+                            }
+                        }
+                    }
+                }
+            }
+            
+            console.log('Kliknięto:', teamName, logoFile);
+            
+            if (teamName !== 'TBD' && teamName !== '') {
+                showTeamModal(teamName, logoFile);
+            }
+        });
+    });
 });
