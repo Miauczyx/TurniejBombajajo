@@ -4,7 +4,7 @@
 
 // Lista wszystkich drużyn: [nazwa, mmr, nazwa_pliku_logo]
 const teams = [
-    ["TBD", 0, "logo.png"],
+    ["Kamlox", 0, "image.png"],
     ["TBD", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
     ["TBD", 0, "logo.png"],
