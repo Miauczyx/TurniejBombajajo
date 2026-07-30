@@ -740,7 +740,7 @@ h1 {
 
 /* ===== LISTA DRUŻYN - BEZ ANIMACJI ===== */
 .team-list-item .team-name-scroll {
-    max-width: 120px;
+    max-width: 200px;
 }
 
 .team-list-item .team-name-scroll .team-name-inner {
@@ -794,7 +794,7 @@ h1 {
     }
     
     .team-list-item .team-name-scroll {
-        max-width: 80px;
+        max-width: 200px;
     }
     
     .team-name-scroll.scroll .team-name-inner {
