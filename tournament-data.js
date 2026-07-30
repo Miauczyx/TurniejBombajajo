@@ -17,7 +17,7 @@ const teams = [
     ["inazuma esports", 0, "zwyrolek.jpg"],
     ["BDJQP", 0, "logo.png"],
     ["Team Psycho", 0, "logo.png"],
-    ["team overdrive ", 0, "overdrive.jpg"],
+    ["team overdrive ", 0, "overdrive.png"],
     ["Prorocy", 0, "logo.png"],
     ["Złomiarze", 0, "logo.png"],
     ["wyjadacze", 0, "logo.png"],
