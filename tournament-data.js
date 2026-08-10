@@ -29,7 +29,7 @@ const teams = [
     ["fc Barcelona", 0, "fcb.webp"],
     ["BDJQP", 0, "bdjqp.png"],
     ["ogboss", 0, "logo.png"],
-    ["kokosy", 0, "leczo.png"],
+    ["TBD", 0, "logo.png"],
     ["Serowi Bracia", 0, "logo.png"],
     ["porzeczki", 0, "logo.png"],
     ["Rzurek", 0, "rzurek.png"],
