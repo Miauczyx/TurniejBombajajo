@@ -45,14 +45,14 @@ const teams = [
 const swissMatches = {
     // === SWISS GROUP 1 ===
     s1_round1: [
-        { team1: "Czekotubki", team2: "Cwele", score1: 0, score2: 0 },
-        { team1: "Genziary", team2: "wyjadacze", score1: 0, score2: 0 },
-        { team1: "bajo", team2: "fc Barcelona", score1: 0, score2: 0 },
-        { team1: "Peakers", team2: "Serowi Bracia", score1: 0, score2: 0 },
-        { team1: "Team Psycho", team2: "Rzurek", score1: 0, score2: 0 },
-        { team1: "Prorocy", team2: "ogboss", score1: 0, score2: 0 },
-        { team1: "Konduktorzy", team2: "drużyna bossów", score1: 0, score2: 0 },
-        { team1: "zlew", team2: "MAJA MA GIGA CYRKONIE", score1: 0, score2: 0 }
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
     ],
     s1_round2_1_0: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
@@ -120,14 +120,14 @@ const swissMatches = {
 
     // === SWISS GROUP 2 ===
     s2_round1: [
-        { team1: "złotówka team", team2: "jajo", score1: 0, score2: 0 },
-        { team1: "inazuma esports", team2: "Wina Tuska", score1: 0, score2: 0 },
-        { team1: "Aero Esport", team2: "team overdrive", score1: 0, score2: 0 },
-        { team1: "112", team2: "kokosy", score1: 0, score2: 0 },
-        { team1: "Open Net Missers", team2: "porzeczki", score1: 0, score2: 0 },
-        { team1: "BRACIA KLOPS", team2: "BDJQP", score1: 0, score2: 0 },
-        { team1: "Totalny Przypadek", team2: "Normalni Ludzie", score1: 0, score2: 0 },
-        { team1: "2136", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
     ],
     s2_round2_1_0: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
