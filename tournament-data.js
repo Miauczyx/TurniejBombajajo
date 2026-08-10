@@ -17,7 +17,7 @@ const teams = [
     ["bajo", 0, "bajo.gif"],
     ["Aero Esport", 0, "aero.png"],
     ["Konduktorzy", 0, "konduktorzy.png"],
-    ["TBD", 0, "overdrive.png"],
+    ["TBD", 0, "logo.png"],
     ["Genziary", 0, "genziary.png"],
     ["inazuma esports", 0, "inazuma.jpg"],
     ["Wina Tuska", 0, "logo.png"],
