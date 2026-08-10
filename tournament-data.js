@@ -15,6 +15,7 @@ const teams = [
     ["Prorocy", 0, "prorocy.jpg"],
     ["BRACIA KLOPS", 0, "klops.png"],
     ["bajo", 0, "bajo.gif"],
+    ["jajo", 0, "jajo.gif"],
     ["Aero Esport", 0, "aero.png"],
     ["Konduktorzy", 0, "konduktorzy.png"],
     ["TBD", 0, "logo.png"],
@@ -34,7 +35,6 @@ const teams = [
     ["Rzurek", 0, "rzurek.png"],
     ["Poszukiwacze Złomu", 0, "zlom.png"],
     ["MAJA MA GIGA CYRKONIE", 0, "logo.png"],
-    ["jajo", 0, "jajo.gif"],
     ["Cwele", 0, "cwele.jpg"]
 ];
 
