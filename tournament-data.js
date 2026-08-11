@@ -34,7 +34,7 @@ const teams = [
     ["porzeczki", 0, "logo.png"],
     ["Rzurek", 0, "rzurek.png"],
     ["Poszukiwacze Złomu", 0, "zlom.png"],
-    ["MAJA MA GIGA CYRKONIE", 0, "logo.png"],
+    ["MAJA MA GIGA CYRKONIE", 0, "maja.jpg"],
     ["Cwele", 0, "cwele.jpg"]
 ];
 
