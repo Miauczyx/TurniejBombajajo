@@ -52,7 +52,7 @@ const swissMatches = {
         { team1: "Team Psycho", team2: "porzeczki", score1: 0, score2: 0 },
         { team1: "112", team2: "fc Barcelona", score1: 0, score2: 0 },
         { team1: "Szybcy i Biedni", team2: "Wina Tuska", score1: 0, score2: 0 },
-        { team1: "Niezbyt szybcy i spokojni", team2: "MAJA MA GIGA CYRKONIE", score1: 0, score2: 0 }
+        { team1: "Niezbyt szybcy i spokojni", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
     ],
     s1_round2_1_0: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
