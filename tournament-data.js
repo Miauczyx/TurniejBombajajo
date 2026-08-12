@@ -128,7 +128,7 @@ const swissMatches = {
         { team1: "Prorocy", team2: "inwalidzi", score1: 0, score2: 0 },
         { team1: "Aero Esport", team2: "inazuma esports", score1: 0, score2: 0 },
         { team1: "Zlew", team2: "Rzurek", score1: 0, score2: 0 }
-    ],
+],
     s2_round2_1_0: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
