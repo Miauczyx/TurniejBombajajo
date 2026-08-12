@@ -6,7 +6,7 @@
 const teams = [
     ["Czekotubki", 2609, "czekotubki.png"],
     ["złotówka team", 2604, "zl.png"],
-    ["Niezbyt szybcy i spokojni", 2595, "logo.png"],
+    ["Niezbyt szybcy i spokojni", 2595, "spokojni.png"],
     ["Zlew", 2584, "zlew.png"],
     ["Team Psycho", 2572, "psycho.png"],
     ["Open Net Missers", 2563, "open.png"],
@@ -19,7 +19,7 @@ const teams = [
     ["Szybcy i Biedni", 2421, "biedni.png"],
     ["Aero Esport", 2419, "aero.png"],
     ["Konduktorzy", 2396, "konduktorzy.png"],
-    ["wyjadacze", 2358, "logo.gif"],
+    ["wyjadacze", 2358, "wyjadacze.png"],
     ["Normalni Ludzie", 2343, "normalni.png"],
     ["Genziary", 2337, "genziary.png"],
     ["inazuma esports", 2325, "inazuma.jpg"],
