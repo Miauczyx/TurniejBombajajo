@@ -120,14 +120,14 @@ const swissMatches = {
 
     // === SWISS GROUP 2 ===
     s2_round1: [
-        { team1: "złotówka team", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 },
-        { team1: "wyjadacze", team2: "inazuma esports", score1: 0, score2: 0 },
-        { team1: "Szybcy i Biedni", team2: "Banda Bandaży", score1: 0, score2: 0 },
-        { team1: "dom starców bydgoszcz", team2: "Obrotni", score1: 0, score2: 0 },
-        { team1: "Team Psycho", team2: "ogboss", score1: 0, score2: 0 },
-        { team1: "112", team2: "Aero Esport", score1: 0, score2: 0 },
-        { team1: "porzeczki", team2: "Normalni Ludzie", score1: 0, score2: 0 },
-        { team1: "fc Barcelona", team2: "Rzurek", score1: 0, score2: 0 }
+        { team1: "złotówka team", team2: "MAJA MA GIGA CYRKONIE", score1: 0, score2: 0 },
+        { team1: "wyjadacze", team2: "Genziary", score1: 0, score2: 0 },
+        { team1: "bajo", team2: "Banda Bandaży", score1: 0, score2: 0 },
+        { team1: "Peakers", team2: "Obrotni", score1: 0, score2: 0 },
+        { team1: "Open Net Missers", team2: "ogboss", score1: 0, score2: 0 },
+        { team1: "Prorocy", team2: "inwalidzi", score1: 0, score2: 0 },
+        { team1: "Aero Esport", team2: "inazuma esports", score1: 0, score2: 0 },
+        { team1: "zlew", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
     ],
     s2_round2_1_0: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
