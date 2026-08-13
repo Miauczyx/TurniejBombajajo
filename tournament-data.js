@@ -139,17 +139,17 @@ const swissMatches = {
     ],
 
     s2_round2_1_0: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "złotówka team", team2: "Aero Esport", score1: 0, score2: 0 },
+        { team1: "Prorocy", team2: "dom starców bydgoszcz", score1: 0, score2: 0 },
+        { team1: "Team Psycho", team2: "Banda Bandaży", score1: 0, score2: 0 },
+        { team1: "bajo", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 }
     ],
 
     s2_round2_0_1: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "Jajo", team2: "Konduktorzy", score1: 0, score2: 0 },
+        { team1: "Genziary", team2: "fc Barcelona", score1: 0, score2: 0 },
+        { team1: "ogboss", team2: "Gta6", score1: 0, score2: 0 },
+        { team1: "wyjadacze", team2: "Rzurek", score1: 0, score2: 0 }
     ],
 
     s2_round3_2_0: [
