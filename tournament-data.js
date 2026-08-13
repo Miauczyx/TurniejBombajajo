@@ -88,7 +88,7 @@ const swissMatches = {
     s1_round4_2_1: [
         { team1: "Szybcy i Biedni", team2: "Black Horse", score1: 0, score2: 2 },
         { team1: "112", team2: "team overdrive", score1: 2, score2: 0 },
-        { team1: "fc nikt nas nie chce", team2: "Normalni Ludzie", score1: 0, score2: 0 }
+        { team1: "fc nikt nas nie chce", team2: "Normalni Ludzie", score1: 2, score2: 1 }
     ],
 
     s1_round4_1_2: [
@@ -102,18 +102,18 @@ const swissMatches = {
     ],
 
     s1_round5_3_1: [
-        { team1: "Black Horse", team2: "112", team3: "?" },
+        { team1: "Black Horse", team2: "112", team3: "fc nikt nas nie chce" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
     s1_round5_2_2: [
         { team1: "Szybcy i Biedni", team2: "team overdrive", score1: 0, score2: 0 },
-        { team1: "?", team2: "?", score1: 0, score2: 0 },
+        { team1: "Normalni Ludzie", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
         { team1: "Obrotni", team2: "inazuma esports", score1: 0, score2: 0 }
     ],
 
     s1_round5_1_3: [
-        { team1: "?", team2: "Peakers", team3: "porzeczki" },
+        { team1: "Czekotubki", team2: "Peakers", team3: "porzeczki" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
