@@ -103,7 +103,7 @@ const swissMatches = {
 
     s1_round5_3_1: [
         { team1: "TBD", team2: "TBD", team3: "TBD" },
-        { team1: "Peakers", team2: "TBD", team3: "TBD" }
+        { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
     s1_round5_2_2: [
@@ -113,7 +113,7 @@ const swissMatches = {
     ],
 
     s1_round5_1_3: [
-        { team1: "TBD", team2: "TBD", team3: "TBD" },
+        { team1: "Peakers", team2: "TBD", team3: "TBD" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
