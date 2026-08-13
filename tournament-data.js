@@ -133,7 +133,7 @@ const swissMatches = {
         { team1: "Prorocy", team2: "Genziary", score1: 2, score2: 0 },
         { team1: "dom starców bydgoszcz", team2: "fc Barcelona", score1: 2, score2: 0 },
         { team1: "Team Psycho", team2: "ogboss", score1: 2, score2: 0 },
-        { team1: "Gta6", team2: "Banda Bandaży", score1: 0, score2: 0 },
+        { team1: "Gta6", team2: "Banda Bandaży", score1: 1, score2: 2 },
         { team1: "bajo", team2: "wyjadacze", score1: 2, score2: 0 },
         { team1: "Niezbyt szybcy i spokojni", team2: "Rzurek", score1: 2, score2: 0 }
     ],
