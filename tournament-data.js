@@ -113,7 +113,7 @@ const swissMatches = {
     ],
 
     s1_round5_1_3: [
-        { team1: "Peakers", team2: "TBD", team3: "TBD" },
+        { team1: "TBD", team2: "Peakers", team3: "TBD" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
@@ -181,7 +181,7 @@ const swissMatches = {
 
     s2_round4_1_2: [
         { team1: "Aero Esport", team2: "Banda Bandaży", score1: 0, score2: 0 },
-        { team1: "Konduktorzy", team2: "wyjadacze", score1: 0, score2: 0 },
+        { team1: "Konduktorzy", team2: "wyjadacze", score1: 0, score2: 2 },
         { team1: "Jajo", team2: "Rzurek", score1: 0, score2: 0 }
     ],
 
