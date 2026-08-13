@@ -226,7 +226,7 @@ const groupMatches = {
             { name: "Open Net Missers", record: "0-0", games: "0-0", points: 0 },
             { name: "Black Horse", record: "0-0", games: "0-0", points: 0 },
             { name: "bajo", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 }
+            { name: "inazuma esports", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
             { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
@@ -242,7 +242,7 @@ const groupMatches = {
             { name: "Zlew", record: "0-0", games: "0-0", points: 0 },
             { name: "112", record: "0-0", games: "0-0", points: 0 },
             { name: "Gta6", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 }
+            { name: "Prorocy", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
             { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
@@ -256,9 +256,9 @@ const groupMatches = {
     groupC: {
         teams: [
             { name: "złotówka team", record: "0-0", games: "0-0", points: 0 },
-            { name: "fc nikt nas nie", record: "0-0", games: "0-0", points: 0 },
-            { name: "Tteam overdrive", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 }
+            { name: "fc nikt nas nie chce", record: "0-0", games: "0-0", points: 0 },
+            { name: "team overdrive", record: "0-0", games: "0-0", points: 0 },
+            { name: "Aero Esport", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
             { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
@@ -273,8 +273,8 @@ const groupMatches = {
         teams: [
             { name: "Team Psycho", record: "0-0", games: "0-0", points: 0 },
             { name: "Niezbyt szybcy i spokojni", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 }
+            { name: "BRACIA KLOPS", record: "0-0", games: "0-0", points: 0 },
+            { name: "wyjadacze", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
             { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
