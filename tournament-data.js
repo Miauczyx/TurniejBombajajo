@@ -6,7 +6,7 @@
 const teams = [
     ["Czekotubki", 2609, "czekotubki.png"],
     ["złotówka team", 2604, "zl.png"],
-    ["Black Horse", 2600, "black.jpg"],
+    ["Black Horse", 2600, "black.png"],
     ["Niezbyt szybcy i spokojni", 2595, "spokojni.png"],
     ["Zlew", 2584, "zlew.png"],
     ["Team Psycho", 2572, "psycho.png"],
