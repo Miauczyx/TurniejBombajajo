@@ -70,7 +70,7 @@ const swissMatches = {
     ],
 
     s1_round3_1_1: [
-        { team1: "Czekotubki", team2: "112", score1: 2, score2: 0 },
+        { team1: "Czekotubki", team2: "112", score1: 0, score2: 2 },
         { team1: "team overdrive", team2: "BRACIA KLOPS", score1: 2, score2: 0 },
         { team1: "fc nikt nas nie chce", team2: "Obrotni", score1: 2, score2: 0 },
         { team1: "Peakers", team2: "Normalni Ludzie", score1: 2, score2: 0 }
@@ -78,27 +78,27 @@ const swissMatches = {
 
     s1_round3_0_2: [
         { team1: "Cwordy", team2: "inazuma esports", score1: 0, score2: 2 },
-        { team1: "porzeczki", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
+        { team1: "porzeczki", team2: "Poszukiwacze Złomu", score1: 2, score2: 0 }
     ],
 
     s1_round4_3_0: [
-        { team1: "TBD", team2: "TBD" }
+        { team1: "Open Net Missers", team2: "Zlew" }
     ],
 
     s1_round4_2_1: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "Szybcy i Biedni", team2: "Black Horse", score1: 0, score2: 0 },
+        { team1: "112", team2: "team overdrive", score1: 0, score2: 0 },
+        { team1: "fc nikt nas nie chce", team2: "Peakers", score1: 0, score2: 0 }
     ],
 
     s1_round4_1_2: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "Czekotubki", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
+        { team1: "Obrotni", team2: "Normalni Ludzie", score1: 0, score2: 0 },
+        { team1: "inazuma esports", team2: "porzeczki", score1: 0, score2: 0 }
     ],
 
     s1_round4_0_3: [
-        { team1: "TBD", team2: "TBD" }
+        { team1: "Cwordy", team2: "Poszukiwacze Złomu" }
     ],
 
     s1_round5_3_1: [
@@ -170,23 +170,23 @@ const swissMatches = {
     ],
 
     s2_round4_3_0: [
-        { team1: "TBD", team2: "TBD" }
+        { team1: "złotówka team", team2: "Team Psycho" }
     ],
 
     s2_round4_2_1: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "dom starców bydgoszcz", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 },
+        { team1: "Prorocy", team2: "bajo", score1: 0, score2: 0 },
+        { team1: "Genziary", team2: "Gta6", score1: 0, score2: 0 }
     ],
 
     s2_round4_1_2: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "Aero Esport", team2: "Banda Bandaży", score1: 0, score2: 0 },
+        { team1: "Konduktorzy", team2: "wyjadacze", score1: 0, score2: 0 },
+        { team1: "Jajo", team2: "Rzurek", score1: 0, score2: 0 }
     ],
 
     s2_round4_0_3: [
-        { team1: "TBD", team2: "TBD" }
+        { team1: "fc Barcelona", team2: "ogboss" }
     ],
 
     s2_round5_3_1: [
