@@ -174,7 +174,7 @@ const swissMatches = {
     ],
 
     s2_round4_2_1: [
-        { team1: "dom starców bydgoszcz", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 },
+        { team1: "dom starców bydgoszcz", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 2 },
         { team1: "Prorocy", team2: "bajo", score1: 0, score2: 0 },
         { team1: "Genziary", team2: "Gta6", score1: 0, score2: 2 }
     ],
