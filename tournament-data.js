@@ -118,12 +118,12 @@ const swissMatches = {
     ],
 
     s1_round6_3_2: [
-        { team1: "TBD", team2: "TBD", team3: "TBD" },
+        { team1: "team overdrive", team2: "BRACIA KLOPS", team3: "inazuma esports" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
     s1_round6_2_3: [
-        { team1: "TBD", team2: "TBD", team3: "TBD" },
+        { team1: "Szybcy i Biedni", team2: "Normalni Ludzie", team3: "Obrotni" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
