@@ -211,7 +211,7 @@ const swissMatches = {
     ],
 
     s2_round6_2_3: [
-        { team1: "TBD", team2: "TBD", team3: "TBD" },
+        { team1: "dom starców bydgoszc", team2: "Genziary", team3: "wyjadacze" },
         { team1: "dom starców bydgoszc", team2: "Genziary", team3: "wyjadacze" }
     ]
 };
