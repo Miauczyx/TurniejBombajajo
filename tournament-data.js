@@ -51,7 +51,7 @@ const swissMatches = {
     ],
 
     s1_round2_1_0: [
-        { team1: "Czekotubki", team2: "Szybcy i Biedni", score1: 0, score2: 0 },
+        { team1: "Czekotubki", team2: "Szybcy i Biedni", score1: 2, score2: 0 },
         { team1: "112", team2: "Open Net Missers", score1: 0, score2: 2 },
         { team1: "Zlew", team2: "team overdrive", score1: 2, score2: 0 },
         { team1: "BRACIA KLOPS", team2: "Black Horse", score1: 0, score2: 2 }
@@ -61,7 +61,7 @@ const swissMatches = {
         { team1: "Cwordy", team2: "fc nikt nas nie chce", score1: 0, score2: 2 },
         { team1: "inazuma esports", team2: "Obrotni", score1: 1, score2: 2 },
         { team1: "porzeczki", team2: "Peakers", score1: 0, score2: 2 },
-        { team1: "Normalni Ludzie", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
+        { team1: "Normalni Ludzie", team2: "Poszukiwacze Złomu", score1: 2, score2: 0 }
     ],
 
     s1_round3_2_0: [
@@ -142,11 +142,11 @@ const swissMatches = {
         { team1: "złotówka team", team2: "Aero Esport", score1: 2, score2: 1 },
         { team1: "Prorocy", team2: "dom starców bydgoszcz", score1: 2, score2: 0 },
         { team1: "Team Psycho", team2: "Banda Bandaży", score1: 2, score2: 0 },
-        { team1: "bajo", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 }
+        { team1: "bajo", team2: "Niezbyt szybcy i spokojni", score1: 1, score2: 2 }
     ],
 
     s2_round2_0_1: [
-        { team1: "Jajo", team2: "Konduktorzy", score1: 0, score2: 0 },
+        { team1: "Jajo", team2: "Konduktorzy", score1: 1, score2: 2 },
         { team1: "Genziary", team2: "fc Barcelona", score1: 2, score2: 0 },
         { team1: "ogboss", team2: "Gta6", score1: 0, score2: 2 },
         { team1: "wyjadacze", team2: "Rzurek", score1: 2, score2: 0 }
