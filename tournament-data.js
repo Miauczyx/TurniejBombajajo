@@ -93,7 +93,7 @@ const swissMatches = {
 
     s1_round4_1_2: [
         { team1: "Czekotubki", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
-        { team1: "Obrotni", team2: "peakers", score1: 2, score2: 0 },
+        { team1: "Obrotni", team2: "Peakers", score1: 2, score2: 0 },
         { team1: "inazuma esports", team2: "porzeczki", score1: 0, score2: 0 }
     ],
 
@@ -103,7 +103,7 @@ const swissMatches = {
 
     s1_round5_3_1: [
         { team1: "TBD", team2: "TBD", team3: "TBD" },
-        { team1: "TBD", team2: "TBD", team3: "TBD" }
+        { team1: "Peakers", team2: "TBD", team3: "TBD" }
     ],
 
     s1_round5_2_2: [
