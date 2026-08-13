@@ -153,15 +153,15 @@ const swissMatches = {
     ],
 
     s2_round3_2_0: [
-        { team1: "złotówka team", team2: "dom starców bydgoszcz", score1: 0, score2: 0 },
-        { team1: "Team Psycho", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 }
+        { team1: "złotówka team", team2: "dom starców bydgoszcz", score1: 2, score2: 1 },
+        { team1: "Team Psycho", team2: "Niezbyt szybcy i spokojni", score1: 2, score2: 1 }
     ],
 
     s2_round3_1_1: [
-        { team1: "Aero Esport", team2: "Prorocy", score1: 0, score2: 0 },
+        { team1: "Aero Esport", team2: "Prorocy", score1: 1, score2: 2 },
         { team1: "Banda Bandaży", team2: "bajo", score1: 0, score2: 2 },
         { team1: "Konduktorzy", team2: "Genziary", score1: 1, score2: 2 },
-        { team1: "Gta6", team2: "wyjadacze", score1: 0, score2: 0 }
+        { team1: "Gta6", team2: "wyjadacze", score1: 2, score2: 1 }
     ],
 
     s2_round3_0_2: [
