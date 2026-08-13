@@ -180,7 +180,7 @@ const swissMatches = {
     ],
 
     s2_round4_1_2: [
-        { team1: "Aero Esport", team2: "Banda Bandaży", score1: 0, score2: 0 },
+        { team1: "Aero Esport", team2: "Banda Bandaży", score1: 2, score2: 1 },
         { team1: "Konduktorzy", team2: "wyjadacze", score1: 0, score2: 2 },
         { team1: "Jajo", team2: "Rzurek", score1: 0, score2: 2 }
     ],
