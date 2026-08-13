@@ -43,7 +43,7 @@ const swissMatches = {
         { team1: "Czekotubki", team2: "Cwordy", score1: 2, score2: 0 },
         { team1: "Szybcy i Biedni", team2: "fc nikt nas nie chce", score1: 2, score2: 0 },
         { team1: "112", team2: "inazuma esports", score1: 0, score2: 0 },
-        { team1: "Open Net Missers", team2: "Obrotni", score1: 0, score2: 0 },
+        { team1: "Open Net Missers", team2: "Obrotni", score1: 2, score2: 1 },
         { team1: "Zlew", team2: "porzeczki", score1: 2, score2: 0 },
         { team1: "Peakers", team2: "team overdrive", score1: 0, score2: 2 },
         { team1: "BRACIA KLOPS", team2: "Normalni Ludzie", score1: 2, score2: 1 },
