@@ -87,7 +87,7 @@ const swissMatches = {
 
     s1_round4_2_1: [
         { team1: "Szybcy i Biedni", team2: "Black Horse", score1: 0, score2: 2 },
-        { team1: "112", team2: "team overdrive", score1: 0, score2: 0 },
+        { team1: "112", team2: "team overdrive", score1: 2, score2: 0 },
         { team1: "fc nikt nas nie chce", team2: "Normalni Ludzie", score1: 0, score2: 0 }
     ],
 
@@ -182,7 +182,7 @@ const swissMatches = {
     s2_round4_1_2: [
         { team1: "Aero Esport", team2: "Banda Bandaży", score1: 0, score2: 0 },
         { team1: "Konduktorzy", team2: "wyjadacze", score1: 0, score2: 2 },
-        { team1: "Jajo", team2: "Rzurek", score1: 0, score2: 0 }
+        { team1: "Jajo", team2: "Rzurek", score1: 0, score2: 2 }
     ],
 
     s2_round4_0_3: [
