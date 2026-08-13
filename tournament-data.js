@@ -34,20 +34,20 @@ const teams = [
     ["porzeczki", 1857, "porzeczki.png"],
     ["Rzurek", 1772, "rzurek.png"],
     ["Poszukiwacze Złomu", 1768, "zlom.png"],
-    ["Cwordy", 1408, "cwele.jpg"],
-    ["Jajo", 0, "jajo.gif"]
+    ["Jajo", 1413, "jajo.gif"],
+    ["Cwordy", 1408, "cwele.jpg"]
 ];
 
 const swissMatches = {
     s1_round1: [
-        { team1: "Czekotubki", team2: "Jajo", score1: 0, score2: 0 },
-        { team1: "Szybcy i Biedni", team2: "Konduktorzy", score1: 0, score2: 0 },
+        { team1: "Czekotubki", team2: "Cwordy", score1: 0, score2: 0 },
+        { team1: "Szybcy i Biedni", team2: "fc nikt nas nie chce", score1: 0, score2: 0 },
         { team1: "112", team2: "inazuma esports", score1: 0, score2: 0 },
         { team1: "Open Net Missers", team2: "Obrotni", score1: 0, score2: 0 },
         { team1: "Zlew", team2: "porzeczki", score1: 0, score2: 0 },
         { team1: "Peakers", team2: "team overdrive", score1: 0, score2: 0 },
         { team1: "BRACIA KLOPS", team2: "Normalni Ludzie", score1: 0, score2: 0 },
-        { team1: "Black Horse", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
+        { team1: "Black Horse", team2: "Rzurek", score1: 0, score2: 0 }
     ],
 
     s1_round2_1_0: [
@@ -128,14 +128,14 @@ const swissMatches = {
     ],
 
     s2_round1: [
-        { team1: "złotówka team", team2: "Cwordy", score1: 0, score2: 0 },
+        { team1: "złotówka team", team2: "Jajo", score1: 0, score2: 0 },
         { team1: "Aero Esport", team2: "Konduktorzy", score1: 0, score2: 0 },
         { team1: "Prorocy", team2: "Genziary", score1: 0, score2: 0 },
         { team1: "dom starców bydgoszcz", team2: "fc Barcelona", score1: 0, score2: 0 },
         { team1: "Team Psycho", team2: "ogboss", score1: 0, score2: 0 },
         { team1: "Gta6", team2: "Banda Bandaży", score1: 0, score2: 0 },
         { team1: "bajo", team2: "wyjadacze", score1: 0, score2: 0 },
-        { team1: "Niezbyt szybcy i spokojni", team2: "Rzurek", score1: 0, score2: 0 }
+        { team1: "Niezbyt szybcy i spokojni", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
     ],
 
     s2_round2_1_0: [
