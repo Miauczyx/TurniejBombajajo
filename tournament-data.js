@@ -250,7 +250,7 @@ const groupMatches = {
             { team1: "Zlew", team2: "Gta6", score1: 0, score2: 0 },
             { team1: "112", team2: "Prorocy", score1: 0, score2: 0 },
             { team1: "Zlew", team2: "112", score1: 0, score2: 0 },
-            { team1: "Prorocy", team2: "Zlew", score1: 0, score2: 0 }
+            { team1: "Prorocy", team2: "Gta6", score1: 0, score2: 0 }
         ]
     },
     groupC: {
@@ -266,7 +266,7 @@ const groupMatches = {
             { team1: "złotówka team", team2: "team overdrive", score1: 0, score2: 0 },
             { team1: "fc nikt nas nie chce", team2: "Aero Esport", score1: 0, score2: 0 },
             { team1: "złotówka team", team2: "Aero Esport", score1: 0, score2: 0 },
-            { team1: "team overdrive", team2: "team overdrive", score1: 0, score2: 0 }
+            { team1: "fc nikt nas nie chce", team2: "team overdrive", score1: 0, score2: 0 }
         ]
     },
     groupD: {
