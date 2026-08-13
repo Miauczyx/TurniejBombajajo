@@ -229,12 +229,12 @@ const groupMatches = {
             { name: "inazuma esports", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
-            { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-            { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-            { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-            { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-            { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-            { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+            { team1: "Open Net Missers", team2: "Black Horse", score1: 0, score2: 0 },
+            { team1: "bajo", team2: "inazuma esports", score1: 0, score2: 0 },
+            { team1: "Open Net Missers", team2: "bajo", score1: 0, score2: 0 },
+            { team1: "Black Horse", team2: "inazuma esports", score1: 0, score2: 0 },
+            { team1: "bajo", team2: "Black Horse", score1: 0, score2: 0 },
+            { team1: "Open Net Missers", team2: "inazuma esports", score1: 0, score2: 0 }
         ]
     },
     groupB: {
