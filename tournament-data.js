@@ -107,8 +107,8 @@ const swissMatches = {
     ],
 
     s1_round5_2_2: [
-        { team1: "Szybcy i Biedni", team2: "team overdrive", score1: 0, score2: 0 },
-        { team1: "Normalni Ludzie", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
+        { team1: "Szybcy i Biedni", team2: "team overdrive", score1: 0, score2: 2 },
+        { team1: "Normalni Ludzie", team2: "BRACIA KLOPS", score1: 0, score2: 2 },
         { team1: "Obrotni", team2: "inazuma esports", score1: 0, score2: 0 }
     ],
 
@@ -195,8 +195,8 @@ const swissMatches = {
     ],
 
     s2_round5_2_2: [
-        { team1: "dom starców bydgoszcz", team2: "Prorocy", score1: 0, score2: 0 },
-        { team1: "Genziary", team2: "Aero Esport", score1: 0, score2: 0 },
+        { team1: "dom starców bydgoszcz", team2: "Prorocy", score1: 0, score2: 2 },
+        { team1: "Genziary", team2: "Aero Esport", score1: 0, score2: 2 },
         { team1: "wyjadacze", team2: "Rzurek", score1: 0, score2: 0 }
     ],
 
