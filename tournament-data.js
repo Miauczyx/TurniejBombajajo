@@ -86,7 +86,7 @@ const swissMatches = {
     ],
 
     s1_round4_2_1: [
-        { team1: "Szybcy i Biedni", team2: "Black Horse", score1: 0, score2: 0 },
+        { team1: "Szybcy i Biedni", team2: "Black Horse", score1: 0, score2: 2 },
         { team1: "112", team2: "team overdrive", score1: 0, score2: 0 },
         { team1: "fc nikt nas nie chce", team2: "Normalni Ludzie", score1: 0, score2: 0 }
     ],
@@ -113,7 +113,7 @@ const swissMatches = {
     ],
 
     s1_round5_1_3: [
-        { team1: "TBD", team2: "Peakers", team3: "TBD" },
+        { team1: "TBD", team2: "Peakers", team3: "porzeczki" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
@@ -201,7 +201,7 @@ const swissMatches = {
     ],
 
     s2_round5_1_3: [
-        { team1: "TBD", team2: "TBD", team3: "TBD" },
+        { team1: "TBD", team2: "Konduktorzy", team3: "TBD" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
