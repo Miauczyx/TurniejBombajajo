@@ -223,9 +223,9 @@ const swissMatches = {
 const groupMatches = {
     groupA: {
         teams: [
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
+            { name: "Open Net Missers", record: "0-0", games: "0-0", points: 0 },
+            { name: "Black Horse", record: "0-0", games: "0-0", points: 0 },
+            { name: "bajo", record: "0-0", games: "0-0", points: 0 },
             { name: "TBD", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
@@ -239,9 +239,9 @@ const groupMatches = {
     },
     groupB: {
         teams: [
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
+            { name: "Zlew", record: "0-0", games: "0-0", points: 0 },
+            { name: "112", record: "0-0", games: "0-0", points: 0 },
+            { name: "Gta6", record: "0-0", games: "0-0", points: 0 },
             { name: "TBD", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
@@ -255,9 +255,9 @@ const groupMatches = {
     },
     groupC: {
         teams: [
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
+            { name: "złotówka team", record: "0-0", games: "0-0", points: 0 },
+            { name: "fc nikt nas nie", record: "0-0", games: "0-0", points: 0 },
+            { name: "Tteam overdrive", record: "0-0", games: "0-0", points: 0 },
             { name: "TBD", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
@@ -271,8 +271,8 @@ const groupMatches = {
     },
     groupD: {
         teams: [
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
-            { name: "TBD", record: "0-0", games: "0-0", points: 0 },
+            { name: "Team Psycho", record: "0-0", games: "0-0", points: 0 },
+            { name: "Niezbyt szybcy i spokojni", record: "0-0", games: "0-0", points: 0 },
             { name: "TBD", record: "0-0", games: "0-0", points: 0 },
             { name: "TBD", record: "0-0", games: "0-0", points: 0 }
         ],
