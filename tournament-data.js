@@ -206,13 +206,13 @@ const swissMatches = {
     ],
 
     s2_round6_3_2: [
-        { team1: "TBD", team2: "TBD", team3: "TBD" },
+        { team1: "Prorocy", team2: "Aero Esport", team3: "wyjadacze" },
         { team1: "TBD", team2: "TBD", team3: "TBD" }
     ],
 
     s2_round6_2_3: [
         { team1: "TBD", team2: "TBD", team3: "TBD" },
-        { team1: "TBD", team2: "TBD", team3: "TBD" }
+        { team1: "dom starców bydgoszc", team2: "Genziary", team3: "wyjadacze" }
     ]
 };
 
