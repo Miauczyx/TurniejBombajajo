@@ -140,7 +140,7 @@ const swissMatches = {
 
     s2_round2_1_0: [
         { team1: "złotówka team", team2: "Aero Esport", score1: 2, score2: 1 },
-        { team1: "Prorocy", team2: "dom starców bydgoszcz", score1: 2, score2: 0 },
+        { team1: "Prorocy", team2: "dom starców bydgoszcz", score1: 0, score2: 2 },
         { team1: "Team Psycho", team2: "Banda Bandaży", score1: 2, score2: 0 },
         { team1: "bajo", team2: "Niezbyt szybcy i spokojni", score1: 1, score2: 2 }
     ],
@@ -153,7 +153,7 @@ const swissMatches = {
     ],
 
     s2_round3_2_0: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "złotówka team", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
     ],
 
