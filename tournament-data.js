@@ -6,10 +6,12 @@
 const teams = [
     ["Czekotubki", 2609, "czekotubki.png"],
     ["złotówka team", 2604, "zl.png"],
+    ["Black Horse", 2600, "black.jpg"],
     ["Niezbyt szybcy i spokojni", 2595, "spokojni.png"],
     ["Zlew", 2584, "zlew.png"],
     ["Team Psycho", 2572, "psycho.png"],
     ["Open Net Missers", 2563, "open.png"],
+    ["NoMerc", 2511, "logo.png"],
     ["dom starców bydgoszcz", 2528, "dom.png"],
     ["Peakers", 2500, "peakers.png"],
     ["112", 2498, "112.png"],
@@ -26,7 +28,6 @@ const teams = [
     ["Wina Tuska", 2283, "logo.png"],
     ["Banda Bandaży", 2213, "banda.png"],
     ["team overdrive", 2200, "overdrive.png"],
-    ["inwalidzi", 2174, "inwalidzi.png"],
     ["fc Barcelona", 2065, "fcb.webp"],
     ["Obrotni", 1951, "obrotni.gif"],
     ["BDJQP", 1939, "bdjqp.png"],
@@ -34,8 +35,7 @@ const teams = [
     ["porzeczki", 1857, "porzeczki.png"],
     ["Rzurek", 1772, "rzurek.png"],
     ["Poszukiwacze Złomu", 1768, "zlom.png"],
-    ["MAJA MA GIGA CYRKONIE", 1626, "maja.jpg"],
-    ["Cwele", 1408, "cwele.jpg"]
+    ["Cwordy", 1408, "cwele.jpg"]
 ];
 
 // ============================================
@@ -45,14 +45,14 @@ const teams = [
 const swissMatches = {
     // === SWISS GROUP 1 ===
     s1_round1: [
-        { team1: "Czekotubki", team2: "Cwele", score1: 0, score2: 0 },
-        { team1: "Konduktorzy", team2: "Genziary", score1: 0, score2: 0 },
-        { team1: "BRACIA KLOPS", team2: "team overdrive", score1: 0, score2: 0 },
-        { team1: "dom starców bydgoszcz", team2: "BDJQP", score1: 0, score2: 0 },
-        { team1: "Team Psycho", team2: "porzeczki", score1: 0, score2: 0 },
-        { team1: "112", team2: "fc Barcelona", score1: 0, score2: 0 },
-        { team1: "Szybcy i Biedni", team2: "Wina Tuska", score1: 0, score2: 0 },
-        { team1: "Niezbyt szybcy i spokojni", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
+        { team1: "Czekotubki", team2: "Cwordy", score1: 0, score2: 0 },
+        { team1: "Black Horse", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 },
+        { team1: "Zlew", team2: "Rzurek", score1: 0, score2: 0 },
+        { team1: "Open Net Missers", team2: "porzeczki", score1: 0, score2: 0 },
+        { team1: "dom starców bydgoszcz", team2: "ogboss", score1: 0, score2: 0 },
+        { team1: "112", team2: "BDJQP", score1: 0, score2: 0 },
+        { team1: "BRACIA KLOPS", team2: "Obrotni", score1: 0, score2: 0 },
+        { team1: "Szybcy i Biedni", team2: "fc Barcelona", score1: 0, score2: 0 }
     ],
     s1_round2_1_0: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
@@ -120,15 +120,15 @@ const swissMatches = {
 
     // === SWISS GROUP 2 ===
     s2_round1: [
-        { team1: "złotówka team", team2: "MAJA MA GIGA CYRKONIE", score1: 0, score2: 0 },
-        { team1: "wyjadacze", team2: "Normalni Ludzie", score1: 0, score2: 0 },
-        { team1: "bajo", team2: "Banda Bandaży", score1: 0, score2: 0 },
-        { team1: "Peakers", team2: "Obrotni", score1: 0, score2: 0 },
-        { team1: "Open Net Missers", team2: "ogboss", score1: 0, score2: 0 },
-        { team1: "Prorocy", team2: "inwalidzi", score1: 0, score2: 0 },
-        { team1: "Aero Esport", team2: "inazuma esports", score1: 0, score2: 0 },
-        { team1: "Zlew", team2: "Rzurek", score1: 0, score2: 0 }
-],
+        { team1: "złotówka team", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 },
+        { team1: "Niezbyt szybcy i spokojni", team2: "Rzurek", score1: 0, score2: 0 },
+        { team1: "Team Psycho", team2: "porzeczki", score1: 0, score2: 0 },
+        { team1: "NoMerc", team2: "ogboss", score1: 0, score2: 0 },
+        { team1: "Peakers", team2: "BDJQP", score1: 0, score2: 0 },
+        { team1: "Prorocy", team2: "Obrotni", score1: 0, score2: 0 },
+        { team1: "bajo", team2: "fc Barcelona", score1: 0, score2: 0 },
+        { team1: "Aero Esport", team2: "team overdrive", score1: 0, score2: 0 }
+    ],
     s2_round2_1_0: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
