@@ -65,19 +65,19 @@ const swissMatches = {
     ],
 
     s1_round3_2_0: [
-        { team1: "Szybcy i Biedni", team2: "Open Net Missers", score1: 0, score2: 0 },
-        { team1: "Zlew", team2: "Black Horse", score1: 0, score2: 0 }
+        { team1: "Szybcy i Biedni", team2: "Open Net Missers", score1: 0, score2: 2 },
+        { team1: "Zlew", team2: "Black Horse", score1: 2, score2: 0 }
     ],
 
     s1_round3_1_1: [
-        { team1: "Czekotubki", team2: "112", score1: 0, score2: 0 },
-        { team1: "team overdrive", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
-        { team1: "fc nikt nas nie chce", team2: "Obrotni", score1: 0, score2: 0 },
-        { team1: "Peakers", team2: "Normalni Ludzie", score1: 0, score2: 0 }
+        { team1: "Czekotubki", team2: "112", score1: 2, score2: 0 },
+        { team1: "team overdrive", team2: "BRACIA KLOPS", score1: 2, score2: 0 },
+        { team1: "fc nikt nas nie chce", team2: "Obrotni", score1: 2, score2: 0 },
+        { team1: "Peakers", team2: "Normalni Ludzie", score1: 2, score2: 0 }
     ],
 
     s1_round3_0_2: [
-        { team1: "Cwordy", team2: "inazuma esports", score1: 0, score2: 0 },
+        { team1: "Cwordy", team2: "inazuma esports", score1: 0, score2: 2 },
         { team1: "porzeczki", team2: "Poszukiwacze Złomu", score1: 0, score2: 0 }
     ],
 
@@ -159,14 +159,14 @@ const swissMatches = {
 
     s2_round3_1_1: [
         { team1: "Aero Esport", team2: "Prorocy", score1: 0, score2: 0 },
-        { team1: "Banda Bandaży", team2: "bajo", score1: 0, score2: 0 },
-        { team1: "Konduktorzy", team2: "Genziary", score1: 0, score2: 0 },
+        { team1: "Banda Bandaży", team2: "bajo", score1: 0, score2: 2 },
+        { team1: "Konduktorzy", team2: "Genziary", score1: 1, score2: 2 },
         { team1: "Gta6", team2: "wyjadacze", score1: 0, score2: 0 }
     ],
 
     s2_round3_0_2: [
-        { team1: "Jajo", team2: "fc Barcelona", score1: 0, score2: 0 },
-        { team1: "ogboss", team2: "Rzurek", score1: 0, score2: 0 }
+        { team1: "Jajo", team2: "fc Barcelona", score1: 2, score2: 0 },
+        { team1: "ogboss", team2: "Rzurek", score1: 0, score2: 2 }
     ],
 
     s2_round4_3_0: [
