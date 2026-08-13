@@ -51,7 +51,7 @@ const swissMatches = {
     ],
 
     s1_round2_1_0: [
-        { team1: "Czekotubki", team2: "Szybcy i Biedni", score1: 2, score2: 0 },
+        { team1: "Czekotubki", team2: "Szybcy i Biedni", score1: 0, score2: 2 },
         { team1: "112", team2: "Open Net Missers", score1: 0, score2: 2 },
         { team1: "Zlew", team2: "team overdrive", score1: 2, score2: 0 },
         { team1: "BRACIA KLOPS", team2: "Black Horse", score1: 0, score2: 2 }
@@ -65,12 +65,12 @@ const swissMatches = {
     ],
 
     s1_round3_2_0: [
-        { team1: "Czekotubki", team2: "Open Net Missers", score1: 0, score2: 0 },
+        { team1: "Szybcy i Biedni", team2: "Open Net Missers", score1: 0, score2: 0 },
         { team1: "Zlew", team2: "Black Horse", score1: 0, score2: 0 }
     ],
 
     s1_round3_1_1: [
-        { team1: "Szybcy i Biedni", team2: "112", score1: 0, score2: 0 },
+        { team1: "Czekotubki", team2: "112", score1: 0, score2: 0 },
         { team1: "team overdrive", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
         { team1: "fc nikt nas nie chce", team2: "Obrotni", score1: 0, score2: 0 },
         { team1: "Peakers", team2: "Normalni Ludzie", score1: 0, score2: 0 }
