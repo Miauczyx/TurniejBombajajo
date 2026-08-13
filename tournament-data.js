@@ -92,7 +92,7 @@ const swissMatches = {
     ],
 
     s1_round4_1_2: [
-        { team1: "Czekotubki", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
+        { team1: "Czekotubki", team2: "BRACIA KLOPS", score1: 1, score2: 2 },
         { team1: "Obrotni", team2: "Peakers", score1: 2, score2: 0 },
         { team1: "inazuma esports", team2: "porzeczki", score1: 2, score2: 0 }
     ],
