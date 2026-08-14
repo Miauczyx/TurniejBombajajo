@@ -223,8 +223,8 @@ const swissMatches = {
 const groupMatches = {
     groupA: {
         teams: [
-            { name: "bajo", record: "1-0", games: "3-0", points: 3 },
-            { name: "Black Horse", record: "2-0", games: "6-1", points: 3 },
+            { name: "Black Horse", record: "2-0", games: "6-1", points: 5 },
+            { name: "bajo", record: "1-0", games: "3-0 ", points: 3 },
             { name: "Open Net Missers", record: "0-1", games: "2-3", points: -1 },
             { name: "inazuma esports", record: "0-2", games: "1-5", points: -5 }
         ],
