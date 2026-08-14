@@ -293,7 +293,7 @@ const groupMatches = {
 
 const playoffMatches = {
     lbr1: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "Gta6", team2: "Black Horse", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
