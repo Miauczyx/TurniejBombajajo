@@ -239,9 +239,9 @@ const groupMatches = {
     },
     groupB: {
         teams: [
-            { name: "112", record: "2-1", games: "6-3", points: 6 },
             { name: "Zlew", record: "2-1", games: "6-3", points: 6 },
             { name: "Gta6", record: "2-1", games: "6-3", points: 6 },
+            { name: "112", record: "2-1", games: "6-3", points: 6 },
             { name: "Prorocy", record: "0-3", games: "0-9", points: -9 }
         ],
         matches: [
