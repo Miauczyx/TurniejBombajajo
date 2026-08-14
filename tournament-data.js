@@ -223,14 +223,14 @@ const swissMatches = {
 const groupMatches = {
     groupA: {
         teams: [
-            { name: "Open Net Missers", record: "0-0", games: "0-0", points: 0 },
+            { name: "bajo", record: "1-0", games: "3-0", points: 3 },
             { name: "Black Horse", record: "0-0", games: "0-0", points: 0 },
-            { name: "bajo", record: "0-0", games: "0-0", points: 0 },
+            { name: "Open Net Missers", record: "0-0", games: "0-0", points: 0 },
             { name: "inazuma esports", record: "0-0", games: "0-0", points: 0 }
         ],
         matches: [
             { team1: "Open Net Missers", team2: "Black Horse", score1: 0, score2: 0 },
-            { team1: "bajo", team2: "inazuma esports", score1: 0, score2: 0 },
+            { team1: "bajo", team2: "inazuma esports", score1: 3, score2: 0 },
             { team1: "Open Net Missers", team2: "bajo", score1: 0, score2: 0 },
             { team1: "Black Horse", team2: "inazuma esports", score1: 0, score2: 0 },
             { team1: "bajo", team2: "Black Horse", score1: 0, score2: 0 },
