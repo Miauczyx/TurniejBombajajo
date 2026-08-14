@@ -223,25 +223,25 @@ const swissMatches = {
 const groupMatches = {
     groupA: {
         teams: [
-            { name: "Black Horse", record: "2-0", games: "6-1", points: 5 },
-            { name: "bajo", record: "1-1", games: "5-3 ", points: 2 },
-            { name: "Open Net Missers", record: "1-1", games: "5-5", points: 0 },
-            { name: "inazuma esports", record: "0-2", games: "1-5", points: -5 }
+            { name: "bajo", record: "2-1", games: "8-3 ", points: 5 },
+            { name: "Open Net Missers", record: "2-1", games: "8-5", points: 3 },
+            { name: "Black Horse", record: "2-1", games: "6-4", points: 2 },
+            { name: "inazuma esports", record: "0-3", games: "1-8", points: -8 }
         ],
         matches: [
             { team1: "Open Net Missers", team2: "Black Horse", score1: 2, score2: 3 },
             { team1: "bajo", team2: "inazuma esports", score1: 3, score2: 0 },
             { team1: "Open Net Missers", team2: "bajo", score1: 3, score2: 2 },
             { team1: "Black Horse", team2: "inazuma esports", score1: 3, score2: 1 },
-            { team1: "bajo", team2: "Black Horse", score1: 0, score2: 0 },
-            { team1: "Open Net Missers", team2: "inazuma esports", score1: 0, score2: 0 }
+            { team1: "bajo", team2: "Black Horse", score1: 3, score2: 0 },
+            { team1: "Open Net Missers", team2: "inazuma esports", score1: 3, score2: 0 }
         ]
     },
     groupB: {
         teams: [
-            { name: "112", record: "2-0", games: "6-0", points: 6 },
-            { name: "Zlew", record: "2-1", games: "6-3", points: 3 },
-            { name: "Gta6", record: "1-1", games: "3-3", points: 0 },
+            { name: "112", record: "2-1", games: "6-3", points: 6 },
+            { name: "Zlew", record: "2-1", games: "6-3", points: 6 },
+            { name: "Gta6", record: "2-1", games: "6-3", points: 6 },
             { name: "Prorocy", record: "0-3", games: "0-9", points: -9 }
         ],
         matches: [
@@ -255,9 +255,9 @@ const groupMatches = {
     },
     groupC: {
         teams: [
-            { name: "team overdrive", record: "2-0", games: "5-1", points: 5 },
-            { name: "złotówka team", record: "1-1", games: "4-4", points: 1 },
-            { name: "fc nikt nas nie chce", record: "1-1", games: "3-5", points: -2 },
+            { name: "złotówka team", record: "2-1", games: "7-3", points: 4 },
+            { name: "team overdrive", record: "2-1", games: "5-4", points: 3 },
+            { name: "fc nikt nas nie chce", record: "2-1", games: "3-5", points: 1 },
             { name: "Aero Esport", record: "0-2", games: "2-4", points: -4 }
         ],
         matches: [
@@ -265,15 +265,15 @@ const groupMatches = {
             { team1: "team overdrive", team2: "Aero Esport", score1: 3, score2: 0 },
             { team1: "złotówka team", team2: "team overdrive", score1: 1, score2: 3 },
             { team1: "fc nikt nas nie chce", team2: "Aero Esport", score1: 3, score2: 2 },
-            { team1: "złotówka team", team2: "Aero Esport", score1: 0, score2: 0 },
-            { team1: "fc nikt nas nie chce", team2: "team overdrive", score1: 0, score2: 0 }
+            { team1: "złotówka team", team2: "Aero Esport", score1: 3, score2: 0 },
+            { team1: "fc nikt nas nie chce", team2: "team overdrive", score1: 3, score2: 0 }
         ]
     },
     groupD: {
         teams: [
+            { name: "Niezbyt szybcy i spokojni", record: "3-0", games: "8-1", points: 5 },
             { name: "wyjadacze", record: "2-1", games: "7-3", points: 4 },
-            { name: "Niezbyt szybcy i spokojni", record: "2-0", games: "5-1", points: 5 },
-            { name: "BRACIA KLOPS", record: "1-1", games: "3-0", points: 0 },
+            { name: "BRACIA KLOPS", record: "1-2", games: "3-6", points: -3 },
             { name: "Team Psycho", record: "0-3", games: "0-9", points: -9 }
         ],
         matches: [
@@ -282,7 +282,7 @@ const groupMatches = {
             { team1: "Team Psycho", team2: "BRACIA KLOPS", score1: 0, score2: 3 },
             { team1: "Niezbyt szybcy i spokojni", team2: "wyjadacze", score1: 3, score2: 1 },
             { team1: "Team Psycho", team2: "wyjadacze", score1: 0, score2: 3 },
-            { team1: "Niezbyt szybcy i spokojni", team2: "BRACIA KLOPS", score1: 0, score2: 0 }
+            { team1: "Niezbyt szybcy i spokojni", team2: "BRACIA KLOPS", score1: 3, score2: 0 }
         ]
     }
 };
