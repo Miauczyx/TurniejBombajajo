@@ -239,13 +239,13 @@ const groupMatches = {
     },
     groupB: {
         teams: [
+            { name: "112", record: "2-0", games: "6-0", points: 6 },
             { name: "Gta6", record: "1-0", games: "3-0", points: 3 },
-            { name: "112", record: "1-0", games: "3-0", points: 3 },
             { name: "Zlew", record: "1-0", games: "3-0", points: 3 },
             { name: "Prorocy", record: "0-3", games: "0-9", points: -9 }
         ],
         matches: [
-            { team1: "Zlew", team2: "112", score1: 0, score2: 0 },
+            { team1: "Zlew", team2: "112", score1: 0, score2: 3 },
             { team1: "Gta6", team2: "Prorocy", score1: 3, score2: 0 },
             { team1: "Zlew", team2: "Gta6", score1: 0, score2: 0 },
             { team1: "112", team2: "Prorocy", score1: 3, score2: 0 },
@@ -279,7 +279,7 @@ const groupMatches = {
         matches: [
             { team1: "Team Psycho", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 3 },
             { team1: "BRACIA KLOPS", team2: "wyjadacze", score1: 0, score2: 3 },
-            { team1: "Team Psycho", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
+            { team1: "Team Psycho", team2: "BRACIA KLOPS", score1: 0, score2: 3 },
             { team1: "Niezbyt szybcy i spokojni", team2: "wyjadacze", score1: 0, score2: 0 },
             { team1: "Team Psycho", team2: "wyjadacze", score1: 0, score2: 3 },
             { team1: "Niezbyt szybcy i spokojni", team2: "BRACIA KLOPS", score1: 0, score2: 0 }
