@@ -278,8 +278,8 @@ const groupMatches = {
         ],
         matches: [
             { team1: "Team Psycho", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 3 },
-            { team1: "BRACIA KLOPS", team2: "wyjadacze", score1: 0, score2: 0 },
-            { team1: "Team Psycho", team2: "BRACIA KLOPS", score1: 0, score2: 3 },
+            { team1: "BRACIA KLOPS", team2: "wyjadacze", score1: 0, score2: 3 },
+            { team1: "Team Psycho", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
             { team1: "Niezbyt szybcy i spokojni", team2: "wyjadacze", score1: 0, score2: 0 },
             { team1: "Team Psycho", team2: "wyjadacze", score1: 0, score2: 3 },
             { team1: "Niezbyt szybcy i spokojni", team2: "BRACIA KLOPS", score1: 0, score2: 0 }
