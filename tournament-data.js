@@ -271,9 +271,9 @@ const groupMatches = {
     },
     groupD: {
         teams: [
-            { name: "wyjadacze", record: "1-0", games: "3-0", points: +3 },
-            { name: "Niezbyt szybcy i spokojni", record: "1-0", games: "3-0", points: +3 },
-            { name: "BRACIA KLOPS", record: "1-0", games: "3-0", points: +3 },
+            { name: "wyjadacze", record: "2-0", games: "6-0", points: 6 },
+            { name: "Niezbyt szybcy i spokojni", record: "1-0", games: "3-0", points: 3 },
+            { name: "BRACIA KLOPS", record: "1-1", games: "3-0", points: 0 },
             { name: "Team Psycho", record: "0-3", games: "0-9", points: -9 }
         ],
         matches: [
