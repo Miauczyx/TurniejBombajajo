@@ -249,8 +249,8 @@ const groupMatches = {
             { team1: "Gta6", team2: "Prorocy", score1: 0, score2: 0 },
             { team1: "Zlew", team2: "Gta6", score1: 0, score2: 0 },
             { team1: "112", team2: "Prorocy", score1: 0, score2: 0 },
-            { team1: "Zlew", team2: "112", score1: 0, score2: 0 },
-            { team1: "Prorocy", team2: "Gta6", score1: 0, score2: 0 }
+            { team1: "Zlew", team2: "Prorocy", score1: 0, score2: 0 },
+            { team1: "112", team2: "Gta6", score1: 0, score2: 0 }
         ]
     },
     groupC: {
