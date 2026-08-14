@@ -256,9 +256,9 @@ const groupMatches = {
     groupC: {
         teams: [
             { name: "złotówka team", record: "2-1", games: "7-3", points: 4 },
-            { name: "team overdrive", record: "2-1", games: "5-4", points: 3 },
-            { name: "fc nikt nas nie chce", record: "2-1", games: "3-5", points: 1 },
-            { name: "Aero Esport", record: "0-2", games: "2-4", points: -4 }
+            { name: "team overdrive", record: "2-1", games: "6-4", points: 2 },
+            { name: "fc nikt nas nie chce", record: "2-1", games: "6-2", points: 1 },
+            { name: "Aero Esport", record: "0-2", games: "9-2", points: -7 }
         ],
         matches: [
             { team1: "złotówka team", team2: "fc nikt nas nie chce", score1: 3, score2: 0 },
