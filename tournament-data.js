@@ -296,11 +296,11 @@ const playoffMatches = {
         { team1: "Gta6", team2: "Black Horse", score1: 0, score2: 0 },
         { team1: "team overdrive", team2: "BRACIA KLOPS", score1: 0, score2: 0 },
         { team1: "wyjadacze", team2: "fc nikt nas nie chce", score1: 0, score2: 0 },
-        { team1: "Open Net Missers", team2: "112", score1: 0, score2: 0 }
+        { team1: "Open Net Missers", team2: "112", score1: 4, score2: 2 }
     ],
     lbr2: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "TBD", team2: "Open Net Missers", score1: 0, score2: 0 }
     ],
     ubqf: [
         { team1: "bajo", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 },
