@@ -304,7 +304,7 @@ const playoffMatches = {
     ],
     ubqf: [
         { team1: "bajo", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 },
-        { team1: "złotówka team", team2: "Zlew", score1: 0, score2: 0 }
+        { team1: "złotówka team", team2: "Zlew", score1: 4, score2: 2 }
     ],
     lbqf: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
@@ -312,7 +312,7 @@ const playoffMatches = {
     ],
     semifinals: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 },
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "złotówka team", team2: "TBD", score1: 0, score2: 0 }
     ],
     grandfinals: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
