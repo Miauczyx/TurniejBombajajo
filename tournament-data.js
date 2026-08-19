@@ -299,7 +299,7 @@ const playoffMatches = {
         { team1: "Open Net Missers", team2: "112", score1: 4, score2: 2 }
     ],
     lbr2: [
-        { team1: "Black Horse", team2: "team overdrive", score1: 0, score2: 0 },
+        { team1: "Black Horse", team2: "team overdrive", score1: 0, score2: 4 },
         { team1: "fc nikt nas nie chce", team2: "Open Net Missers", score1: 0, score2: 0 }
     ],
     ubqf: [
@@ -307,7 +307,7 @@ const playoffMatches = {
         { team1: "złotówka team", team2: "Zlew", score1: 4, score2: 2 }
     ],
     lbqf: [
-        { team1: "Zlew", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "Zlew", team2: "eam overdrive", score1: 0, score2: 0 },
         { team1: "Niezbyt szybcy i spokojni", team2: "TBD", score1: 0, score2: 0 }
     ],
     semifinals: [
