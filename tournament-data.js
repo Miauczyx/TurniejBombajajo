@@ -311,7 +311,7 @@ const playoffMatches = {
         { team1: "Niezbyt szybcy i spokojni", team2: "Open Net Missers", score1: 0, score2: 0 }
     ],
     semifinals: [
-        { team1: "bajo", team2: "TBD", score1: 0, score2: 0 },
+        { team1: "bajo", team2: "zlew", score1: 0, score2: 0 },
         { team1: "złotówka team", team2: "TBD", score1: 0, score2: 0 }
     ],
     grandfinals: [
