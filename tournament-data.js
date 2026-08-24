@@ -308,11 +308,11 @@ const playoffMatches = {
     ],
     lbqf: [
         { team1: "Zlew", team2: "Black Horse", score1: 4, score2: 2 },
-        { team1: "Niezbyt szybcy i spokojni", team2: "Open Net Missers", score1: 0, score2: 0 }
+        { team1: "Niezbyt szybcy i spokojni", team2: "Open Net Missers", score1: 4, score2: 0 }
     ],
     semifinals: [
         { team1: "bajo", team2: "Zlew", score1: 0, score2: 0 },
-        { team1: "złotówka team", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "złotówka team", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 }
     ],
     grandfinals: [
         { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
