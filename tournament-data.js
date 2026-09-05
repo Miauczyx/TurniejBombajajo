@@ -312,13 +312,13 @@ const playoffMatches = {
     ],
     semifinals: [
         { team1: "bajo", team2: "Zlew", score1: 0, score2: 0 },
-        { team1: "złotówka team", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 }
+        { team1: "złotówka team", team2: "Niezbyt szybcy i spokojni", score1: 2, score2: 4 }
     ],
     grandfinals: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "TBD", team2: "Niezbyt szybcy i spokojni", score1: 0, score2: 0 }
     ],
     thirdplace: [
-        { team1: "TBD", team2: "TBD", score1: 0, score2: 0 }
+        { team1: "TBD", team2: "złotówka team", score1: 0, score2: 0 }
     ]
 };
 
